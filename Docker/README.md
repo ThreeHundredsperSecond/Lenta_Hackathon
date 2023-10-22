@@ -7,7 +7,7 @@ git clone git@github.com:AlexBesedin/LentaHackathon.git
 
 
 ## Создание файла с переменными окружения (.env)
-```
+```bash
 cd LentaHackathon/infra
 touch .env
 SECRET_KEY = <Секретный ключ>
@@ -55,7 +55,7 @@ sudo docker-compose exec backend celery -A lenta_main call lenta_main.tasks.main
 
 ## На продакшене, необходимо выставить время, когда будет выполняться асинхронная задача прогноза. Выполнение задачи будет происходит в фоновом режиме.
 
-```
+```bash
 CELERY_BEAT_SCHEDULE = {
     'run_main_every_10_min': {
         'task': 'lenta_main.tasks.main',
