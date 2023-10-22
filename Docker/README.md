@@ -7,7 +7,7 @@ git clone git@github.com:AlexBesedin/LentaHackathon.git
 
 
 ## Создание файла с переменными окружения (.env)
-`
+```
 cd LentaHackathon/infra
 touch .env
 SECRET_KEY = <Секретный ключ>
@@ -19,7 +19,7 @@ DB_HOST=<db>
 DB_PORT=<5432>
 CELERY_BROKER_URL=redis://redis:6379/0
 CELERY_RESULT_BACKEND=redis://redis:6379/0
-`
+```
 
 ## Развертывание контейнеров и выполнение миграций
 `cd LentaHackathon/infra/
