@@ -1,7 +1,7 @@
 # Подготовка и запуск проекта
 
 ## Клонирование репозитория
-`git clone git@github.com:AlexBesedin/LentaHackathon.git`
+```git clone git@github.com:AlexBesedin/LentaHackathon.git```
 
 
 ## Создание файла с переменными окружения (.env)
