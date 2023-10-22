@@ -17,3 +17,11 @@
 С гордостью объявляю, что наша команда заняла 2 место в хакатоне! Это был потрясающий опыт, и я благодарен за возможность продемонстрировать наши навыки и творчество.
 - [Сертификат](https://github.com/ThreeHundredsperSecond/images/blob/main/42.png)
 
+## Стек технологий: 
+- Python 3.11
+- CatBoost
+- Facebook Prophet
+- Tsfresh
+- Docker
+- Nginx
+- Shap
