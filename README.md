@@ -18,10 +18,5 @@
 - [Сертификат](https://github.com/ThreeHundredsperSecond/images/blob/main/42.png)
 
 ## Стек технологий: 
-- Python 3.11
-- CatBoost
-- Facebook Prophet
-- Tsfresh
-- Docker
-- Nginx
-- Shap
+
+` Python 3.11, CatBoost, Facebook Prophet, Tsfresh, Docker, Nginx, Shap`
