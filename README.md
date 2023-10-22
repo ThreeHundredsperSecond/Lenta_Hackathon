@@ -1,2 +1,2 @@
-# Lenta_Hackathon
-Hackathon 09.23, prediction of demand for own-made products of the Lenta hypermarket
+# Хакатон от компании “Лента” (сентябрь 2023 г.)
+Проектное участие в кросс-функциональном хакатоне по разработке ML-продукта предсказательной модели для ООО “Лента”.
