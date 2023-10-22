@@ -1,12 +1,12 @@
 # Подготовка и запуск проекта
 
-## Клонирование репозитория
+### Клонирование репозитория
 ```bash
 git clone git@github.com:AlexBesedin/LentaHackathon.git
 ```
 
 
-## Создание файла с переменными окружения (.env)
+### Создание файла с переменными окружения (.env)
 ```bash
 cd LentaHackathon/infra
 touch .env
@@ -21,7 +21,7 @@ CELERY_BROKER_URL=redis://redis:6379/0
 CELERY_RESULT_BACKEND=redis://redis:6379/0
 ```
 
-## Развертывание контейнеров и выполнение миграций
+### Развертывание контейнеров и выполнение миграций
 
 ```bash
 cd LentaHackathon/infra/
@@ -30,14 +30,14 @@ sudo docker-compose exec backend python manage.py migrate
 ```
 
 
-## Создание суперпользователя и сбор статики
+### Создание суперпользователя и сбор статики
 
 ```bash
 sudo docker-compose exec backend python manage.py createsuperuser
 sudo docker-compose exec backend python manage.py collectstatic --no-input
 ```
 
-## Загрузка магазинов, категорий и продаж в базу данных
+### Загрузка магазинов, категорий и продаж в базу данных
 
 ```bash
 sudo docker-compose exec backend python manage.py import_stores
@@ -46,14 +46,14 @@ sudo docker-compose exec backend python manage.py import_sales
 ```
 
 
-## Запуск задачи Celery вручную
+### Запуск задачи Celery вручную
 
 *Примечание: Данная команда запустит инференс прогноза, который сделает запросы в базу данных, после передаст данные в DS модель, и полученный прогноз от DS модели запишет в базу данных в модель Forecast.*
 ```bash
 sudo docker-compose exec backend celery -A lenta_main call lenta_main.tasks.main
 ```
 
-## На продакшене, необходимо выставить время, когда будет выполняться асинхронная задача прогноза. Выполнение задачи будет происходит в фоновом режиме.
+### На продакшене, необходимо выставить время, когда будет выполняться асинхронная задача прогноза. Выполнение задачи будет происходит в фоновом режиме.
 
 ```bash
 CELERY_BEAT_SCHEDULE = {
@@ -65,14 +65,14 @@ CELERY_BEAT_SCHEDULE = {
 
 ```
 
-## Celery Flower позволяет отслеживать состояние и прогресс выполнения задач, а также управлять задачами и рабочими процессами в вашем Celery-кластере через веб-интерфейс.
+### Celery Flower позволяет отслеживать состояние и прогресс выполнения задач, а также управлять задачами и рабочими процессами в вашем Celery-кластере через веб-интерфейс.
 
 ```
 http://localhost:5555/
 ```
 
 
-## Документация
+### Документация
 
 *API документация будет доступна по адресу:*
 
